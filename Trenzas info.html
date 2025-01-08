@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trenzas Info</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffe1f1;
+        color: #333;
+        background-image: url("fondo.jpg"); /* Aquí deberás tener el archivo de imagen de fondo llamado fondo.jpg */
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .header {
+        background-color: #181717;
+        color: rgb(243, 218, 218);
+        padding: 1em;
+        text-align: center;
+        border-bottom: 3px solid #0d0d0d;
+      }
+      .header img {
+        width: 200px;
+        vertical-align: middle;
+      }
+      .header h1 {
+        display: inline;
+        margin-left: 10px;
+      }
+      .content {
+        background-color: rgba(250, 247, 247, 0.8); /* Fondo semi-transparente para legibilidad */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 80%;
+        max-width: 800px;
+        text-align: center;
+      }
+      .footer {
+        background-color: #ff69b4;
+        color: white;
+        padding: 1em;
+        text-align: center;
+        border-top: 3px solid #efb4ce;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+      h1,
+      h2 {
+        color: #151415;
+      }
+      a {
+        color: #ff69b4;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+       @keyframes mover {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .cuadro {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ff69b4;
+        color: white;
+        border-radius: 8px;
+        text-align: center;
+        text-decoration: none; /* Sin subrayado */
+        animation: mover 2s infinite; /* Animación de movimiento */
+        transition: background-color 0.3s ease;
+      }
+      .cuadro:hover {
+        background-color: #ff1493; /* Cambia de color al pasar el cursor */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="asset/img/Logo sobre moda femenina minimalista neutral.png"
+        alt="Logo"
+      />
+    </div>
+    <br />
+    <center><h1>Bienvenidos a Trenzas Info</h1></center>
+    <br />
+    <div class="content">
+      <h2><a href="informacion.html" class="cuadro">Inicio</a></h2>
+      <h3>
+        <p id="description">
+          Este es nuestro sitio web dedicado a las trenzas. Aquí encontrarás
+          información sobre los diferentes estilos de trenzas, tutoriales paso a
+          paso, consejos para el cuidado del cabello y una galería inspiradora.
+          ¡Esperamos que disfrutes tu visita!
+        </p>
+      </h3>
+    </div>
+
+    <script>
+      // JavaScript para centrar el párrafo
+      document.addEventListener("DOMContentLoaded", function () {
+        var description = document.getElementById("description");
+        var content = document.querySelector(".content");
+        content.style.display = "flex";
+        content.style.flexDirection = "column";
+        content.style.justifyContent = "center";
+        content.style.height = "100%";
+        content.style.boxSizing = "border-box";
+      });
+    </script>
+  </body>
+</html>
